@@ -1,0 +1,2 @@
+FLASK_APP=autoinsta.py
+FLASK_DEBUG=0
