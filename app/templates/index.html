@@ -49,8 +49,12 @@
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">F.A.Q</a></li>
           <li><a href="#contact">Contact Us</a></li>
-
-          <li class="get-started"><a href="#features">Get Started</a></li>
+          {%if check%}
+            <li class="get-started"><a href="{{ url_for('client')}}">Client Dashboard</a></li>
+            <li><a href="{{ url_for('logout')}}">Logout</a></li>
+          {%else%}
+            <li class="get-started"><a href="{{ url_for('login')}}">Login</a></li>
+          {%endif%}
         </ul>
       </nav><!-- .nav-menu -->
 
