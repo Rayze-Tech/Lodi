@@ -49,12 +49,6 @@
           <li><a href="{{ url_for('.index', _anchor='pricing') }}">Pricing</a></li>
           <li><a href="{{ url_for('.index', _anchor='faq') }}">F.A.Q</a></li>
           <li><a href="{{ url_for('.index', _anchor='contact') }}">Contact Us</a></li>
-          {%if check%}
-            <li class="get-started"><a href="{{ url_for('client')}}">Client Dashboard</a></li>
-            <li><a href="{{ url_for('logout')}}">Logout</a></li>
-          {%else%}
-            <li class="get-started"><a href="{{ url_for('login')}}">Login</a></li>
-          {%endif%}
         </ul>
       </nav><!-- .nav-menu -->
 
