@@ -6,19 +6,13 @@ from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, \
 
 #flask_wtf autogenerates forms if u give it info on form fields
 
-class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    remember_me = BooleanField('Remember Me')
+class MemberForm(FlaskForm):
+    firstName =  StringField('First Name', validators=[DataRequired()])
+    lastName =  StringField('Last Name', validators=[DataRequired()])
+    buisName =  StringField('Name of Business', validators=[DataRequired()])
+    buisAddress =  StringField('Address of Business', validators=[DataRequired()])
+    email = StringField('Email Address', validators=[DataRequired(), Email()])
+    phonePrimary =  StringField('Primary Phone Number', validators=[DataRequired()])
+    phoneBuis=  StringField('Business Phone Number', validators=[DataRequired()])
+    website =  StringField('Website', validators=[DataRequired()])
     submit = SubmitField('Sign In')
-
-
-class RegistrationForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    password2 = PasswordField('Repeat Password', validators=[DataRequired(), EqualTo('password')])
-    submit = SubmitField('Register')
-
-class ForgetForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired(), Email()])
-    submit = SubmitField('Submit')
