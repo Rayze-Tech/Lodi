@@ -47,10 +47,12 @@
           <li><a href="#details">About Us</a></li>
           <li><a href="{{ url_for('directory') }}">Member Directory</a></li>
           <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+          <li><a href="#lodican">Lodi C.A.N</a></li>
           <li><a href="#contact">Contact Us</a></li>
           <li class="drop-down"><a href="">More</a>
             <ul>
-              <li><a href="{{ url_for('.joinus', _anchor='join') }}">Join Us</a></li>
+              <li><a href="{{ url_for('joinus')}}">Join Us</a></li>
+              <li><a href="{{ url_for('links') }}">Usefull Links</a></li>
               <li><a href="#footer">Newsletter</a></li>
             </ul>
           </li>
@@ -122,6 +124,27 @@
         
     </section><!-- End Details Section -->
 
+    <!--LODICAN SECTION-->
+    <section id="lodican" class="details">
+      <div class="container">
+        <div class="row content">
+          <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+            <img src="static/img/Lodi-CAN-Logo.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+            <h3>What is the Lodi Community Action Network (C.A.N.)</h3>
+            <p class="font-italic">
+              Lodi C.A.N. is a non-profit organization that falls under the Lodi Chamber of Commerce. It was created to allow residents to join the members of our business community and create the best Lodi to live and raise our children. 
+            </p>
+            <p>
+              Mission Statement: To advocate, promote and help form new local volunteer Non-profit organizations while also raising  awareness of Mental Health, Diversity, Equality and Inclusion through the Borough of Lodi and the Stigma Free Initiative.
+            </p>
+          </div>
+        </div>
+        <a href="{{ url_for('joinus')}}" class="download-btn"><i class="bx bx-happy-beaming"></i> Sign up for Information on becoming a Member</a>
+      </div>
+    </section>
+
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
@@ -187,36 +210,11 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact" data-aos="fade-up">
-            <h3>Appland</h3>
+            <h3>Lodi Chamber of Commerce</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Phone:</strong> +1 201-298-3460<br>
+              <strong>Email:</strong> info@lodichamberofcommerce.com<br>
             </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="100">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="200">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
@@ -237,11 +235,11 @@
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>Appland</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Lodi Chamber of Commerce</span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
+      <!--<div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      </div>-->
     </div>
   </footer><!-- End Footer -->
 

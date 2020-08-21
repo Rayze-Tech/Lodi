@@ -1,7 +1,6 @@
 from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request,session
 from app import app
-from app.forms import MemberForm
 from config import Config
 
 # THIS IS A SECRET DON'T TELL ANYONE
@@ -14,7 +13,6 @@ def index():
 
 @app.route('/joinus')
 def joinus():
-    form=MemberForm()
     return render_template('joinus.html')
 
 @app.route('/gallery')
@@ -24,3 +22,7 @@ def gallery():
 @app.route('/directory')
 def directory():
     return render_template('directory.html')
+
+@app.route('/links')
+def links():
+    return render_template('links.html')
