@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<br>
+<br>
+<section id="join">
+    <h1 class="text-center">Join the Lodi Chamber of Commerce Today!</h1>
+    <hr>
+    <h2 class="text-center">Annual Membership to the Lodi Chamber of Commerce</h2>
+        <form action="https://send.pageclip.co/fNRTsP76wwOlZgxUeEQTWinYccPZC3Gr/member-form" class="pageclip-form" method="post">
+        <div class="form-row">
+            <div class="form-group col-lg-3 offset-lg-3">
+            <input type="text" name="First Name" class="form-control" id="firstName" placeholder="First Name"/>
+            
+            </div>
+            <div class="form-group col-lg-3">
+                <input type="text" name="Last Name" class="form-control" id="lastName" placeholder="Last Name"/>
+                
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-lg-3 offset-lg-3">
+                <input type="text" name="Name of Business" class="form-control" id="buisName" placeholder="Name of Business"/>       
+            </div>
+            <div class="form-group col-lg-3">
+                <input type="text" name="Address of Business" class="form-control" id="buisAddress" placeholder="Address of Business"/>
+                
+            </div>   
+        </div>
+        <div class="form-row">
+            <div class="form-group col-lg-2 offset-lg-3">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+            
+            </div>
+            <div class="form-group col-lg-2">
+                <input type="text" name="Primary Phone Number" class="form-control" id="phonePrim" placeholder="Primary Phone Number"/>
+                
+            </div>
+            <div class="form-group col-lg-2">
+                <input type="text" name="Business Phone Number"" class="form-control" id="phoneBuis" placeholder="Business Phone Number"/>
+                
+            </div>      
+        </div>
+        <div class="form-group col-lg-6 offset-lg-3">
+            <input type="text" name="website" class="form-control" id="website" placeholder="Website"/>
+            
+        </div>
+        <div class="text-center"><button class="pageclip-form__submit" type="submit" name='submit' title="Send Message">Submit</button></div>
+        </form>
+        <br>
+    <h2 class="text-center">After completing the form above you can pay the $100 annual membership by clicking the link below.</h2>
+
+    <div id="paypal-button-container" class="offset-lg-3"></div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+        paypal.Buttons({
+            style: {
+                shape: 'rect',
+                color: 'gold',
+                layout: 'vertical',
+                label: 'paypal',
+                
+            },
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '1'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+</section>
+{%endblock%}

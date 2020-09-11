@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Lodi Chamber of Commerce</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/img/assets/lodiSmall.jpg" rel="icon">
+  <link href="static/img/assets/lodiLogo.jpg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class= "fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="#hero">Lodi Chamber of Commerce</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#hero">Home</a></li>
+          <li><a href="#details">About Us</a></li>
+          <li><a href="{{ url_for('directory') }}">Member Directory</a></li>
+          <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+          <li><a href="#lodican">Lodi C.A.N</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li class="drop-down"><a href="">More</a>
+            <ul>
+              <li><a href="{{ url_for('joinus')}}">Join Us</a></li>
+              <li><a href="{{ url_for('links') }}">Useful Links</a></li>
+              <li><a href="#footer">Newsletter</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <h1>Helping Build Our Community Buisnesses</h1>
+      <div class="row">
+        <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+          <div>
+            <h6>The Regional Lodi Chamber of Commerce is a non-profit, non-political organization of businesses and professional individuals working together to improve business opportunity and the community that surrounds.</h6>
+            <h6>We pride ourselves with assisting the businesses in our greater area through trainings, seminars and networking events as well as creating a positive impact through community relations through events and contests to establish a long term relationship with the residents of our region.</h6>
+            <h6>Working together with the municipality, we pledge to provide a clean, safe environment for our customers. We will work with the local officials to ensure responsible government and improvements to the borough of Lodi and its neighbors.</h6>
+            <a href="{{ url_for('directory')}}"class="download-btn"><i class="bx bx-book-heart"></i> View Members</a>
+            <a href="{{ url_for('joinus')}}"class="download-btn"><i class="bx bxs-book-add"></i> Join Us</a>
+          </div>
+        </div>
+        <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+          <img src="static/img/assets/lodiPoster.jpeg" class="img-fluid" alt="">
+        </div>  
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Details Section ======= -->
+    <section id="details" class="details">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-md-4" data-aos="fade-right">
+            <img src="static/img/assets/lodiLogo.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-4" data-aos="fade-up">
+            <h3>Who We Are</h3>
+            <p>
+              The Regional Lodi Chamber of Commerce is a private organization built of businesses and organizations in the Lodi regional area made up of towns including:
+            </p>
+            <table>
+              <tr>
+                <td><i class="icofont-flame-torch"></i> Lodi</td>
+                <td><i class="icofont-flame-torch"></i> Saddle Brook</td>
+                <td><i class="icofont-flame-torch"></i> Garfield</td>
+                <td><i class="icofont-flame-torch"></i> Hasbrouck Heights</td>
+              </tr>
+              <tr>
+                <td><i class="icofont-flame-torch"></i> Elmwood Park</td>
+                <td><i class="icofont-flame-torch"></i> Wood-Ridge</td>
+                <td><i class="icofont-flame-torch"></i> Bergen County</td>
+                <td><i class="icofont-flame-torch"></i> Passaic County</td>
+              </tr>
+            </table>
+            <br>
+            <h3>What Does the Lodi Chamber of Commerce Do?</h3>
+            <p>The Lodi Chamber of Commerce is a civic organization made up of a membership from our local businesses in our greater community. We look to develop working relationships with our local government, board of education and other organizations in Lodi to create a community that thrives because of our engaging residents.</p>
+            <p class="font-italic">We as a community, can and will continue to make Lodi the best place to live and raise our children.</p>
+          </div>
+
+        </div>
+        
+    </section><!-- End Details Section -->
+
+    <!--LODICAN SECTION-->
+    <section id="lodican" class="details">
+      <div class="container">
+        <div class="row content">
+          <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+            <img src="static/img/Lodi-CAN-Logo.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+            <h3>What is the Lodi Community Action Network (C.A.N.)</h3>
+            <p class="font-italic">
+              Lodi C.A.N. is a non-profit organization that falls under the Lodi Chamber of Commerce. It was created to allow residents to join the members of our business community and create the best Lodi to live and raise our children. 
+            </p>
+            <p>
+              Mission Statement: To advocate, promote and help form new local volunteer Non-profit organizations while also raising  awareness of Mental Health, Diversity, Equality and Inclusion through the Borough of Lodi and the Stigma Free Initiative.
+            </p>
+          </div>
+        </div>
+        <a href="{{ url_for('joinus')}}" class="download-btn"><i class="bx bx-happy-beaming"></i> Sign up for Information on becoming a Member</a>
+      </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>We Want to Hear From You</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 offset-lg-3">
+            <div class="row">
+              <div class="col-lg-12 info" data-aos="fade-up">
+                <i class="bx bx-map"></i>
+                <h4>Meeting Address</h4>
+                <p>Lodi Memorial Library<br>1 Memorial Drive<br>Lodi, NJ 07644<br>Meeting time: 2nd Monday of the Month @ 6:00pm</p>
+              </div>
+              <div class="col-lg-6 info" data-aos="fade-up">
+                <i class="bx bx-map"></i>
+                <h4>Mailing Address</h4>
+                <p>PO Box 572<br>Lodi, NJ 07644</p>
+              </div>
+              <div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="100">
+                <i class="bx bx-phone"></i>
+                <h4>Call Us</h4>
+                <p>+1 201-298-3460</p>
+              </div>
+              <div class="col-lg-12 info" data-aos="fade-up" data-aos-delay="200">
+                <i class="bx bx-envelope"></i>
+                <h4>Email Us</h4>
+                <p>info@lodichamberofcommerce.com</p>
+              </div>
+            </div>
+          </div>  
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter" data-aos="fade-up">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Want to Be Kept Informed?</h4>
+            <p>Join our Mailing List Today</p>
+            <form action="" method="post">
+              <input type="text" name="name" value="name">
+              <input type="text" name="email" value="email">
+              <input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact" data-aos="fade-up">
+            <h3>Lodi Chamber of Commerce</h3>
+            <p>
+              <strong>Phone:</strong> +1 201-298-3460<br>
+              <strong>Email:</strong> info@lodichamberofcommerce.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
+            <h4>Our Social Networks</h4>
+            
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Lodi Chamber of Commerce</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Powered by <a href="https://rayzeconsulting.com/">Rayze Tech</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="static/vendor/venobox/venobox.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+  <script src="{{ url_for('static', filename='static/main.js') }}"></script>
+
+</body>
+
+</html>
