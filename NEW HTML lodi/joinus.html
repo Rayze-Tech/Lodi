@@ -116,39 +116,80 @@
                     <input type="text" name="website" class="form-control" id="website" placeholder="Website"/>
                     
                 </div>
-                <div class="text-center"><button class="pageclip-form__submit" type="submit" name='submit' title="Send Message">Submit</button></div>
-                </form>
+                <div class="text-center"><button class="pageclip-form__submit " type="submit" name='submit' title="Send Message" style="
+                  background-color: #5846f9;
+                  border: 0;
+                  padding: 10px 24px;
+                  color: #fff;
+                  transition: 0.4s;
+                  border-radius: 5px;">Submit</button></div>
+
+              </form>
+                
+              <br>
+                <h2 class="text-center">After completing the form above you can pay the $100 annual membership by clicking the link below.</h2>
                 <br>
-            <h2 class="text-center">After completing the form above you can pay the $100 annual membership by clicking the link below.</h2>
+                <a class=" col-lg-6 offset-lg-5" href="https://www.paypal.com/paypalme/Lodichamberofcommerc"><button style="
+                  background-color: #5846f9;
+                  border: 0;
+                  padding: 10px 24px;
+                  color: #fff;
+                  transition: 0.4s;
+                  border-radius: 5px;">Pay for Membership</button></a>
         
-            <div id="paypal-button-container" class="offset-lg-3"></div>
-            <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
-            <script>
-                paypal.Buttons({
-                    style: {
-                        shape: 'rect',
-                        color: 'gold',
-                        layout: 'vertical',
-                        label: 'paypal',
-                        
-                    },
-                    createOrder: function(data, actions) {
-                        return actions.order.create({
-                            purchase_units: [{
-                                amount: {
-                                    value: '1'
-                                }
-                            }]
-                        });
-                    },
-                    onApprove: function(data, actions) {
-                        return actions.order.capture().then(function(details) {
-                            alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                        });
-                    }
-                }).render('#paypal-button-container');
+
+            <!--<div class="clear"><input type="submit" value="Pay for Membership" name="pay" class="offset-lg-2" style="
+              background-color: #5846f9;
+              border: 0;
+              padding: 10px 24px;
+              color: #fff;
+              transition: 0.4s;
+              border-radius: 5px;
+              "></div>
+            </div>-->
+            <!--Payment
+            <script
+              src="https://www.paypal.com/sdk/js?client-id=AclvCI3_3Pqpc4YcdhFtgplhJLBSC7-tg5IeH1yVnvcq5EwCxVj02LDfuastjdohemMY-Vn4CasGmiGX"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
             </script>
-        </section>
+            <div id="smart-button-container">
+              <div style="text-align: center;">
+                <div id="paypal-button-container"></div>
+              </div>
+            </div>
+          <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+          <script>
+            function initPayPalButton() {
+              paypal.Buttons({
+                style: {
+                  shape: 'rect',
+                  color: 'gold',
+                  layout: 'vertical',
+                  label: 'paypal',
+                  
+                },
+        
+                createOrder: function(data, actions) {
+                  return actions.order.create({
+                    purchase_units: [{"amount":{"currency_code":"USD","value":100}}]
+                  });
+                },
+        
+                onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                  });
+                },
+        
+                onError: function(err) {
+                  console.log(err);
+                }
+              }).render('#paypal-button-container');
+            }
+            initPayPalButton();
+          </script>
+
+            </script>
+        </section>-->
     </section><!-- End Breadcrumbs Section -->
 
   </main><!-- End #main -->
@@ -187,11 +228,7 @@
           <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
             <h4>Our Social Networks</h4>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.facebook.com/LodiChamberOfCommerce/" class="facebook"><i class="bx bxl-facebook"></i></a>
             </div>
           </div>
 
@@ -203,9 +240,9 @@
       <div class="copyright">
         &copy; Copyright <strong><span>Lodi Chamber of Commerce</span></strong>. All Rights Reserved
       </div>
-      <!--<div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>-->
+      <div class="credits">
+        Powered by <a href="https://rayze.tech/">Rayze Technologies</a>
+      </div>
     </div>
   </footer><!-- End Footer -->
 
