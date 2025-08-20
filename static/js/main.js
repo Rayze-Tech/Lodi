@@ -19,7 +19,15 @@
   if ($(window).scrollTop() > 100) {
     $('#header').addClass('header-scrolled');
   }
-
+document.querySelectorAll('.team-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Avoid double-toggling when the actual button is clicked
+      if (e.target.closest('.name-toggle')) return;
+      const targetSel = card.getAttribute('data-bs-target');
+      const btn = card.querySelector('.name-toggle');
+      if (targetSel && btn) btn.click();
+    });
+  });
   // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $('#header').outerHeight() - 1;
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
